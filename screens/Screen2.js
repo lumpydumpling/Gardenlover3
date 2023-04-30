@@ -144,7 +144,6 @@ const Screen2 = ({ navigation }) => {
           {isPlant3Hovered && <Text style={{ fontSize: 16 }}>Daisies</Text>}
 
     </View>
-      <Text style={{ fontSize: 24 }}>Create your garden</Text>
       <View style={{ position: 'absolute', left: plant4Position.x, top: plant4Position.y }}>
         <Animated.Image
           source={require('../plant_images/ferns.jpg')}
