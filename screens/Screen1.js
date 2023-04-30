@@ -35,7 +35,9 @@ const Screen1 = ({ navigation }) => {
         the box. Click "Choose plants" to proceed to the next screen and start selecting plants for
         your garden.
       </Text>
-      <Button title="Choose plants" onPress={() => navigation.navigate('Screen2')} />
+      <Button title="Choose plants" onPress={() => navigation.navigate('Screen2')} 
+        color="green"
+      />
     </View>
   );
 };

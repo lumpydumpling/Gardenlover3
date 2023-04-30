@@ -60,7 +60,9 @@ const Screen2 = ({ navigation }) => {
           {...panResponder3.panHandlers}
         />
       </View>
-      <Button title="Go back to Home" onPress={() => navigation.goBack()} />
+      <Button title="Go back to Home" onPress={() => navigation.goBack()} 
+        color="green"
+      />
     </View>
   );
 };
