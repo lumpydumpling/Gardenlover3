@@ -1,3 +1,4 @@
+import { AccessibilityInfo } from "react-native";
 import React, { useEffect, useRef, useState } from "react";
 import { View, Text } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
@@ -54,16 +55,30 @@ export default function Box() {
   return (
     <NavigationContainer>
       <AppNavigator />
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <View
-        ref={boxRef}
-        style={{ width: `${width}%`, height: `${height}%`, backgroundColor: "brown" }}
-      />
-      <Text style={{ fontSize: 24, fontFamily: "Helvetica", marginTop: 20 }}>
-        {widthFeet}'{widthInches}" x {heightFeet}'{heightInches}"
-      </Text>
-    </View>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <View
+          ref={boxRef}
+          style={{
+            width: `${width}%`,
+            height: `${height}%`,
+            borderWidth: 15,
+            borderColor: "#D2B48C",
+            borderRadius: 10,
+            backgroundColor: "#654321",
+          }}
+        />
+        <Text style={{
+  fontSize: 24,
+  fontWeight: "500",
+  color: "black", 
+  fontWeight: "bold",
+  marginTop: 10, // reduced margin for closer proximity to the box
+  textAlign: "center" // center the text horizontally
+}}>
+  {widthFeet}'{widthInches}" x {heightFeet}'{heightInches}"
+</Text>
+
+      </View>
     </NavigationContainer>
   );
 }
-
